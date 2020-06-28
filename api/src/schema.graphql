@@ -1,0 +1,62 @@
+type User {
+  id: String!
+  employeeId: String
+  firstName: String
+  middleName: String
+  lastName: String
+  photo: String
+  employeeTitle: String
+  employeeOrganization: String
+  employeeStatus: String
+  email: String
+  location: String
+  mobilephone: String
+  homePhone: String
+  officePhone: String
+  startTime: Int
+  endTime: Int
+  notes: String
+  accounts: [Account] @relation(name: "PersonaHasAccount", direction: OUT)
+  entitlements: [AccessRight]
+    @relation(name: "IdentityHasEntitlement", direction: OUT)
+  parent: [User] @relation(name: "PersonaReportsToPersona", direction: OUT)
+  children: [User] @relation(name: "PersonaReportsToPersona", direction: IN)
+  userGroups: [UserGroup]
+    @relation(name: "IdentityHasIdentityGroup", direction: OUT)
+}
+
+type Account {
+  id: String!
+  accountName: String
+  accountDomain: String
+  accountStatus: String
+  fqdn: String
+  startTime: Int
+  endTime: Int
+}
+
+type AccessRight {
+  id: String!
+  entitlementName: String
+  entitlementId: String
+  entitlementDescription: String
+  startTime: Int
+  endTime: Int
+  parents: [AccessRight]
+    @relation(name: "EntitlementHasChildEntitlement", direction: OUT)
+  children: [AccessRight]
+    @relation(name: "EntitlementHasChildEntitlement", direction: IN)
+}
+
+type UserGroup {
+  id: String!
+  identityGroupName: String
+  identityGroupId: String
+  identityGroupDescription: String
+  startTime: Int
+  endTime: Int
+  parents: [UserGroup]
+    @relation(name: "IdentityGroupHasChildIdentityGroup", direction: OUT)
+  children: [UserGroup]
+    @relation(name: "IdentityGroupHasChildIdentityGroup", direction: IN)
+}

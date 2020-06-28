@@ -1,0 +1,11 @@
+.tree {
+  path {
+    fill: none;
+    stroke: #57bdc3;
+  }
+  text {
+    text-shadow: -1px -1px 3px white, -1px 1px 3px white, 1px -1px 3px white,
+      1px 1px 3px white;
+    pointer-events: none;
+  }
+}
