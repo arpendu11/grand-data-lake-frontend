@@ -41,7 +41,6 @@ cd /web-react
 yarn install
 ```
 
-![create grandstack app output](img/create-grandstack-app.png)
 
 This will install all the dependencies required for this web-app.
 
