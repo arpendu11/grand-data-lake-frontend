@@ -1,11 +1,7 @@
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://grandstack.io/deploy-starter-netlify) [![Deploy to Vercel](https://vercel.com/button)](https://grandstack.io/deploy-starter-vercel) [![Provision Neo4j](https://grandstack.io/img/provision-neo4j.png)](https://sandbox.neo4j.com/?usecase=blank-sandbox)
 
 
-# GRANDstack Starter
-
-```
-npx create-grandstack-app myNewApp
-```
+# grand-data-lake-frontend
 
 This project is a starter for building a [GRANDstack](https://grandstack.io) (GraphQL, React, Apollo, Neo4j Database) application. There are two components to the starter, the web frontend application (in React and Angular flavors) and the API app (GraphQL server).
 
@@ -25,25 +21,33 @@ After singing in to Neo4j Sandbox, click the `+ New Project` button and select t
 
 ![Neo4j Sandbox connection details](img/neo4j-sandbox.png)
 
-### 2. Run the `create-grandstack-app` CLI
+### 2. Install dependencies
 
 ```
-npx create-grandstack-app myNewApp
+npm install
+cd /api
+npm install
+cd /web-react
+npm install
 ```
 
 or with Yarn
 
 ```
-yarn create grandstack-app myNewApp
+yarn install
+cd /api
+yarn install
+cd /web-react
+yarn install
 ```
 
 ![create grandstack app output](img/create-grandstack-app.png)
 
-This will create a new directory `myNewApp`, download the latest release of the GRANDstack Starter, install dependencies and prompt for your connection credentials for Neo4j to connect to the GraphQL API.
+This will install all the dependencies required for this web-app.
 
 ### 3. Seed the database (optional)
 
-Once the application is running, in another terminal run
+You can update the schema and edit the seed-data in /api/src/seed/seed-mutations.js. You can also use any CSV or JSON data. Once the application is running, in another terminal run
 
 ```
 npm run seedDb
