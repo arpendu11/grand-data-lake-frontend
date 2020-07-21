@@ -5,6 +5,12 @@
 
 This project is a starter for building a [GRANDstack](https://grandstack.io) (GraphQL, React, Apollo, Neo4j Database) application. There are two components to the starter, the web frontend application (in React and Angular flavors) and the API app (GraphQL server).
 
+## Explanation and Usage
+
+[Full-stack GraphQL application using GRAND stack](https://arpendu.hashnode.dev/6-full-stack-graphql-application-using-grand-stack-ckc8ur65a00gxvms18svjfsxn)
+
+## Hands-On with the Starter video
+
 [![Hands On With The GRANDstack Starter](http://img.youtube.com/vi/rPC71lUhK_I/0.jpg)](http://www.youtube.com/watch?v=1JLs166lPcA 'Hands On With The GRANDstack Starter')
 
 _Hands On With The GRANDstack Starter Video_
